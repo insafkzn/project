@@ -1,0 +1,161 @@
+#menu__toggle {
+    opacity: 0;
+    margin: 0;
+    width: 0;
+    height: 0;
+}
+#menu__toggle:checked + .menu__btn > span {
+transform: rotate(45deg);
+}
+#menu__toggle:checked + .menu__btn > span::before {
+top: 0;
+transform: rotate(0deg);
+}
+#menu__toggle:checked + .menu__btn > span::after {
+top: 0;
+transform: rotate(90deg);
+}
+#menu__toggle:checked ~ .menu__box {
+right: 0 !important;
+}
+.hamburger-menu{
+font-size: 0px;
+height: 0;
+}
+.menu__btn {
+width: 0px;
+height: 0px;
+cursor: pointer;
+border-radius: 16px;
+z-index: 2;
+}
+.menu__btn > span,
+.menu__btn > span::before,
+.menu__btn > span::after {
+display: block;
+position: absolute;
+width: 0px;
+height: 0px;
+border-radius:16px;
+background-color: #616161;
+transition-duration: .25s;
+z-index: 2;
+
+
+}
+.menu__btn > span::before {
+content: '';
+top: 0px;
+}
+.menu__btn > span::after {
+content: '';
+top: 0px;
+}
+.menu__box {
+display: block;
+position: fixed;
+top: 0;
+right: -100%;
+width: 0px;
+margin: 0;
+padding: 0;
+list-style: none;
+background-color: #F2785C;
+box-shadow: 2px 2px 6px rgba(0, 0, 0, .4);
+transition-duration: .25s;
+border-radius:16px;
+z-index: 1;
+}
+.menu__item {
+display: block;
+margin: 0;
+font-family: 'Red Hat Text';
+font-style: normal;
+font-weight: 0; 
+font-size: 0px;
+line-height: 0px;
+color: #FFFFFF;
+text-decoration: none;
+transition-duration: .25s;
+}
+
+@media screen and (max-width: 1024px){
+#menu__toggle {
+    opacity: 0;
+}
+#menu__toggle:checked + .menu__btn > span {
+    transform: rotate(45deg);
+}
+#menu__toggle:checked + .menu__btn > span::before {
+    top: 0;
+    transform: rotate(0deg);
+}
+#menu__toggle:checked + .menu__btn > span::after {
+    top: 0;
+    transform: rotate(90deg);
+}
+#menu__toggle:checked ~ .menu__box {
+    right: 0 !important;
+}
+.hamburger-menu{
+    display: flex;
+    justify-content: center;
+    align-items:center;
+}
+
+.menu__btn {
+    width: 26px;
+    height: 26px;
+    cursor: pointer;
+    border-radius: 16px;
+    z-index: 2;
+}
+.menu__btn > span,
+.menu__btn > span::before,
+.menu__btn > span::after {
+    display: block;
+    position: absolute;
+    width: 26.5px;
+    height: 2.6px;
+    border-radius:16px;
+    background-color: #fff;
+    transition-duration: .25s;
+    z-index: 2;
+    
+
+}
+.menu__btn > span::before {
+    content: '';
+    top: -8px;
+}
+.menu__btn > span::after {
+    content: '';
+    top: 8px;
+}
+.menu__box {
+    display: block;
+    position: fixed;
+    top: 35px;
+    right: -100%;
+    width: 165px;
+    margin: 0;
+    padding: 33px 0 30px 0;
+    list-style: none;
+    background-color: #F2785C;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, .4);
+    transition-duration: .25s;
+    border-radius:16px;
+}
+.menu__item {
+    display: block;
+    margin: 10px 15px 0 44px;
+    font-family: 'Red Hat Text';
+    font-style: normal;
+    font-weight: 500; 
+    font-size: 16px;
+    line-height: 21px;
+    color: #FFFFFF;
+    text-decoration: none;
+    transition-duration: .25s;
+}
+}

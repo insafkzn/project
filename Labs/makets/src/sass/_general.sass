@@ -1,0 +1,266 @@
+h2
+    text-align: center
+    font-family: 'Red Hat Text'
+    font-style: normal
+    font-weight: 500
+    font-size: 40px
+    line-height: 53px
+    color: $orange
+
+html
+    margin: 0
+
+body
+    margin: 0
+    padding: 0
+
+.container
+    /* width: 1200px */
+    width: 83.33%
+    margin: 0 auto
+
+header
+    position: relative
+
+nav
+    position: absolute
+    width: 100%
+    height: 90px
+    background: rgba(242, 120, 92, 0.7)
+    .navig
+        display: flex
+        justify-content: space-between
+        &_img
+            display: flex
+            justify-content: space-between
+            align-items: center
+            width: 216px
+            margin-top: 18px
+            .name_logo
+                font-family: 'Magra'
+                font-style: normal
+                font-weight: 600
+                font-size: 32px
+                line-height: 39px
+                color: #FFFFFF
+        .login_btn
+            width: 103px
+            height: 41px
+            +btn
+            font-family: 'Red Hat Text'
+            font-style: normal
+            font-weight: 500
+            font-size: 16px
+            line-height: 21px
+            color: #FFFFFF
+            margin-top: 25px
+            input
+                position: absolute
+                width: 0px
+
+.menu 
+    display: flex 
+    justify-content: space-between 
+    width: 50%
+    margin: 0
+    padding: 0
+    margin-top: 35px
+    list-style-type: none 
+    .menu_link 
+        font-family: 'Red Hat Text'
+        font-style: normal
+        font-weight: 500
+        font-size: 16px
+        line-height: 21px
+        color: #FFFFFF
+        text-decoration: none
+
+.explore
+    min-height: 765px
+    background: url('../img/bg/bg_main.png')center center/cover no-repeat
+    padding: 122px 0 221px 0
+    h1
+        font-family: 'Aleo'
+        font-style: normal
+        font-weight: 700
+        font-size: 80px
+        line-height: 96px
+        color: #FFFFFF
+    &_descr 
+        font-family: 'Aleo'
+        font-style: italic
+        font-weight: 700
+        font-size: 20px
+        line-height: 24px
+        color: #FFFFFF
+    .input
+        margin-top: 50px
+        position: relative
+        input
+            height: 95px
+            width: 892px
+            padding-left: 41px
+            font-weight: 300
+            font-size: 30px
+            border-radius: 16px
+            border: none
+            background-color: rgba(255, 255, 255, 0.7)
+            font-family: 'Aleo'
+            font-style: italic
+            font-weight: 400
+            font-size: 24px
+            line-height: 29px
+            &::placeholder
+                color: $orange
+        .do_btn
+            position: absolute
+            left: 646px
+            top: 18px
+            width: 228px
+            height: 59px 
+            +btn
+            font-family: 'Red Hat Text'
+            font-style: normal
+            font-weight: 500
+            font-size: 24px
+            line-height: 32px
+            color: #FFFFFF
+            
+.steps
+    min-height: 424px
+    padding: 80px 0 97px 0
+    &_wrap
+        display: flex
+        justify-content: space-between
+        margin-top: 40px
+    &_waiting
+        width: 317px
+    &_item
+        display: flex
+        justify-content: center
+        align-items: center
+        margin: 0 auto
+        width: 100px
+        height: 100px
+        border-radius: 16px
+        background-color: $orange
+    &_descr
+        display: flex
+        justify-content: center
+        text-align: center
+        margin-top: 30px
+        font-family: 'Aleo'
+        font-style: normal
+        font-weight: 400
+        font-size: 20px
+        line-height: 24px
+        color: #0D606F
+
+.gallery
+    margin-top: 46px
+
+.gallery-cell 
+    width: 800px
+    height: 800px
+    border-radius: 16px
+    margin-right: 60px
+    background: #8C8
+    counter-increment: gallery-cell
+    margin-bottom: 24px
+    &_1
+        background: url('../img/waiting/cor_1.png')
+    &_2
+        background: url('../img/waiting/cor_2.png')   
+    &_3
+        background: url('../img/waiting/cor_3.png')
+
+.popular
+    min-height: 1042px
+    padding-bottom: 80px
+
+.find_btn
+    display: flex
+    justify-content: center
+    align-items: center
+    margin: 0 auto
+    margin-top: 60px
+    width: 228px
+    height: 59px
+    +btn
+    .find_descr
+        font-family: 'Red Hat Text'
+        font-style: normal
+        font-weight: 500
+        font-size: 24px
+        line-height: 32px
+        color: #FFFFFF
+        margin-left: 5px
+    i
+        font-size: 35px
+        color: #fff
+        margin-right: 5px
+
+.travel_promo
+    margin-top: 40px
+    background: url('../img/bg/bg_sub.png') center center/cover no-repeat
+    .travel_bg
+        background-color: rgba(255,255,255,0.7)
+        padding: 10px 0 41px 0
+    .travel_box
+        display: flex
+        justify-content: center
+        margin-top: 30px
+    img
+        border-radius: 16px
+        width: 100%
+    &_descr
+        margin-left: 40px
+        margin-top: 5px
+    &_title 
+        font-family: 'Aleo'
+        font-style: normal
+        font-weight: 400
+        font-size: 35px
+        line-height: 42px
+        color: #0D606F
+    &_text
+        margin-top: 24px
+        font-family: 'Aleo'
+        font-style: normal
+        font-weight: 400
+        font-size: 20px
+        line-height: 24px
+        color: #0D606F
+        a
+            color: #0D606F
+            font-weight: 700
+    .find_btn
+        margin-top: 40px
+    
+.travel
+    footer
+        min-height: 61px
+        .travel_wrap
+            display: flex
+            justify-content: space-between
+        .travel_social
+            display: flex
+            justify-content: space-between
+            width: 141px
+            margin-top: 15px
+            i
+                color: #fff
+                font-size: 30px
+        .travel_link
+            &:nth-child(1)
+                width: 141px
+            &:nth-child(2)
+                margin-top: 21px
+                font-family: 'Red Hat Text'
+                font-style: normal
+                font-weight: 500
+                font-size: 16px
+                line-height: 21px
+                a
+                    color: #FFFFFF
+                    text-decoration: none

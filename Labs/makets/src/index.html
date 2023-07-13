@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Aleo:ital,wght@0,400;0,700;1,400;1,700&family=Magra:wght@700&family=Red+Hat+Text:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/menu.css"/><!-- menu burger -->
+    <script src="https://kit.fontawesome.com/c6a6357097.js" crossorigin="anonymous"></script>
+    <script src="js/flickity.pkgd.min.js"></script>
+    <link rel="stylesheet" href="css/flickity.css">
+    <link rel="stylesheet" href="css/style.css"> 
+    <title>Travel Portal</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="container">
+                <div class="navig">
+                    <div class="navig_img">
+                        <img src="img/logo/logo_main.png" alt="logo" class="logo">
+                        <div class="name_logo">Travel Portal</div>
+                    </div>
+                    <ul class="menu">
+                        <li class="menu_item"><a href="#" class="menu_link">How It Works</a></li>
+                        <li class="menu_item"><a href="#" class="menu_link">Plan Your Trip</a></li>
+                        <li class="menu_item"><a href="#" class="menu_link">Destinations</a></li>
+                        <li class="menu_item"><a href="#" class="menu_link">Travel Stories</a></li>
+                    </ul>
+                    <button class="login_btn">Login
+                        <div class="hamburger-menu">
+                            <input id="menu__toggle" type="checkbox" />
+                            <label class="menu__btn" for="menu__toggle">
+                              <span></span>
+                            </label>
+                        
+                            <ul class="menu__box">
+                              <li><a class="menu__item" href="#">How It Works</a></li>
+                              <li><a class="menu__item" href="#">Plan Your Trip</a></li>
+                              <li><a class="menu__item" href="#">Destinations</a></li>
+                              <li><a class="menu__item" href="#">Travel Stories</a></li>
+                              <li><a class="menu__item" href="#">Account</a></li>
+                              <li><a class="menu__item" href="#">Social Media</a></li>
+                            </ul>
+                          </div> 
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section class="explore">
+        <div class="container">
+            <h1>Explore the beauty of<br>the World</h1>
+            <div class="explore_descr">Receive personalized recommendations for countries, hotels, activities and more</div>
+            <div class="input"><input type="text" placeholder="What would you like to do?" size="30" maxlength="40"><button class="do_btn">Start Planning</button></div>
+        </div>
+    </section>
+
+    <section class="steps">
+        <div class="container">
+            <h2>3 STEPS TO THE PERFECT TRIP</h2>
+            <div class="steps_wrap">
+                <div class="steps_waiting">
+                    <div class="steps_item"><img src="icons/bicycle.png" alt="" class="steps_item_img"></div>
+                    <div class="steps_descr">Tell us what you want to do</div>
+                </div>
+                <div class="steps_waiting">
+                    <div class="steps_item"><img src="icons/date.png" alt="" class="steps_item_img"></div>
+                    <div class="steps_descr">Share us preferable dates </div>
+                </div>
+                <div class="steps_waiting">
+                    <div class="steps_item"><img src="icons/iron.png" alt="" class="steps_item_img"></div>
+                    <div class="steps_descr">We will give you recommendations</div>
+                </div>
+            </div>
+        </div>
+    </section>
+  
+    <section class="popular">
+        <h2>POPULAR DESTINATIONS</h2>
+        <div class="gallery js-flickity"
+        data-flickity-options='{ "wrapAround": true }'>
+            <div class="gallery-cell gallery-cell_1"></div>
+            <div class="gallery-cell gallery-cell_2"></div>
+            <div class="gallery-cell gallery-cell_3"></div>
+        </div>
+
+        <button class="find_btn"><i class="fa fa-arrow-right" aria-hidden="true"></i><div class="find_descr">Find More</div></button>
+    </section>
+
+    <section class="travel">
+        <h2>TRAVEL STORIES</h2>
+        <div class="travel_promo">
+            <div class="travel_bg">
+                <div class="container">
+                    <div class="travel_box">
+                        <img src="img/waiting/travel_1.png" alt="" class="travel_promo_img">
+                        <div class="travel_promo_descr">
+                            <div class="travel_promo_title">10 Photos of Attractive Thailand</div>
+                            <div class="travel_promo_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit...<span><a href="#">Read More</a></span></div>
+                        </div>
+                    </div>
+                    <div class="travel_box">
+                        <img src="img/waiting/travel_2.png" alt="" class="travel_promo_img">
+                        <div class="travel_promo_descr">
+                            <div class="travel_promo_title">Canyonlands National Park, Utah</div>
+                            <div class="travel_promo_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit...<span><a href="#">Read More</a></span></div>
+                        </div>
+                    </div>
+                    <div class="travel_box">
+                        <img src="img/waiting/travel_3.png" alt="" class="travel_promo_img">
+                        <div class="travel_promo_descr">
+                            <div class="travel_promo_title">I left my heart in the Mountains!</div>
+                            <div class="travel_promo_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit...<span><a href="#">Read More</a></span></div>
+                        </div>
+                    </div>
+                    <div class="travel_box">
+                        <img src="img/waiting/travel_4.png" alt="" class="travel_promo_img">
+                        <div class="travel_promo_descr">
+                            <div class="travel_promo_title">The Longest journey in my life!</div>
+                            <div class="travel_promo_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit...<span><a href="#">Read More</a></span></div>
+                        </div>
+                    </div>
+                    <div class="find_btn"><i class="fa fa-arrow-right" aria-hidden="true"></i><div class="find_descr">See More</div></div>
+                </div>
+            </div>
+            <footer>
+                <div class="container">
+                    <div class="travel_wrap">
+                        <div class="travel_link"></div>
+                        <div class="travel_link"><a href="#">All Rights Reserved © Travel Portal</a></div>
+                        <div class="travel_link">
+                            <div class="travel_social">
+                                <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                                <a href="#"><i class="fa fa-youtube-play" aria-hidden="true"></i></a>
+                                <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </section>
+
+</body>
+</html>

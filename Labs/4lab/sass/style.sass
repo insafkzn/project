@@ -1,0 +1,44 @@
+html
+    box-sizing: border-box
+h1
+    margin:40px 0 0 300px
+    color: #fff
+    font-size: 45px
+body
+    background: url('../bg/main_bg.png') center center/cover no-repeat
+.container
+    max-width: 1170px
+    margin: 0 auto
+.films
+    display: flex 
+    justify-content: space-around
+    flex-wrap: wrap
+    padding: 0px 0 40px 0
+    &_item
+        margin-top: 30px
+        width: 21%
+        background-color: #a7a7a7
+        /* opacity: 0.7 */
+        padding: 10px 0 10px 0 
+        transition: 0.5s all
+        border-radius: 10%
+        cursor: pointer
+        &:hover
+            background-color: #414141
+            /* opacity: 0.7 */
+        &:active
+            background: #006e0c
+        &_img
+            height: 300px
+            display: flex
+            justify-content: center
+            img
+                height: 100%
+                border-radius: 10%
+        &_descr
+            margin: 15px 20px 5px 20px
+        &_reating
+            color: #fff400
+            font-size: 23px
+        &_names
+            font-size:28px
