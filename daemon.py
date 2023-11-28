@@ -3,12 +3,16 @@ import sys
 import os
 import atexit
 import signal
+import time
 
 class Daemon:
-	def __init__(self, pidfile): self.pidfile = pidfile
+	def __init__(self, pidfile, stdin='/dev/null', stdout='/dev/null', stderr='/dev/null'): 
+		self.stdin = stdin
+		self.stdout = stdout
+		self.stderr = stderr
+		self.pidfile = pidfile
 
 	def daemonize(self):
-		#"""Deamonize class. UNIX double fork mechanism."""
 		try:
 			pid = os.fork()
 			if pid > 0:
@@ -19,7 +23,7 @@ class Daemon:
 			sys.exit(1)
 			
 		# decouple from parent environment
-		os.chdir('/')
+		#os.chdir('/')
 		os.setsid()
 		os.umask(0)
 
@@ -33,30 +37,25 @@ class Daemon:
 			sys.stderr.write('fork #2 failed: {0}\n'.format(err))
 			sys.exit(1)
 
-		# redirect standard file descriptors
 		sys.stdout.flush()
 		sys.stderr.flush()
-		si = open(os.devnull, 'r')
-		so = open(os.devnull, 'a+')
-		se = open(os.devnull, 'a+')
-
+		si = open(self.stdin, 'r')
+		so = open(self.stdout, 'a+')
+		se = open(self.stderr, 'a+')
 		os.dup2(si.fileno(), sys.stdin.fileno())
 		os.dup2(so.fileno(), sys.stdout.fileno())
 		os.dup2(se.fileno(), sys.stderr.fileno())
 
-		
-			
-
-		# write pidfile
-		# atexit.register(self.delpid)
+        # write pidfile
+		atexit.register(self.delpid)
 
 		pid = str(os.getpid())
-		with open(self.pidfile,'w+') as f:
-			f.write(pid + '\n')  
+		with open(self.pidfile, 'w+') as f:
+			f.write(pid + '\n')
   
 	
-	# def delpid(self):
-	# 	os.remove(self.pidfile) 
+	def delpid(self):
+		os.remove(self.pidfile) 
 	
 	def start(self):
 		# a)
@@ -66,12 +65,13 @@ class Daemon:
 				if pid:
 					print("Daemon is already running with PID:", pid)
 					sys.exit(1)
+				f.close()
 			self.pidfile.close()
-		deamon = Daemon('/home/garfiev/daemon-example.pid')
+		#daemon = Daemon('/home/garfiev/daemon-example.pid')
 		# b)
-		deamon.daemonize()
+		self.daemonize()
 		# c)
-		deamon.run()
+		self.run()
 		
 
 	def stop(self):
