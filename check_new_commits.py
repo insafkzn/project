@@ -10,11 +10,11 @@ cwd = pathlib.Path(__file__).parent.resolve()
 logging.basicConfig(level=logging.INFO, filename="py_log.log", filemode='w')
 
 def check_new_commits(dirGit):
-	subprocess.run(['git', '--git-dir=' + dirGit + '/.git', 'fetch'])
+	subprocess.run(['git', '--git-dir=' + dirGit + '/.git', 'fetch', 'origin', 'master'])
 	# Notify.Notification.new("Has new commits!").show()
 	# logging.info('--git-dir=' + str(cwd) + '/.git')
 	# result = subprocess.run(['git', '--git-dir=' + dirGit + '/.git', 'log', '--graph',"--pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset'", '--abbrev-commit', '--date=relative', 'master..origin/master'], universal_newlines=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-	result = subprocess.run(['git', '--git-dir=' + dirGit + '/.git', 'log', '--graph',"--pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset'", '--abbrev-commit', '--date=relative', 'origin/master'], text=True, capture_output=True)
+	result = subprocess.run(['git', '--git-dir=' + dirGit + '/.git', 'log', '--graph',"--pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset'", '--abbrev-commit', '--date=relative', 'master..origin/master'], text=True, capture_output=True)
 	# result = subprocess.run(['git', '--git-dir=' + str(cwd) + '/.git', 'log', 'master..origin/master'], text=True, capture_output=True)
 	logging.info('--git-dir=' + str(cwd) + '/.git')
 	if result.stdout:
