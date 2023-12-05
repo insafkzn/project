@@ -33,10 +33,10 @@ dirGit = str(cwd)
 class MyDaemon(Daemon):
 	def run(self):
 		Notify.init("MyDaemon")
-		time.sleep(3)
+		time.sleep(1)
 		while True:
 			check_new_commits(dirGit)
-			time.sleep(30)
+			time.sleep(10)
 
 daemon = MyDaemon('/tmp/daemon-example.pid')
 if sys.argv[1] == 'start': daemon.start()
